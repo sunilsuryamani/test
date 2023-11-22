@@ -1,11 +1,27 @@
 apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-demo
+  description: An example deployment of a Backstage application.
+  annotations:
+    github.com/project-slug: backstage/demo
+spec:
+  type: website
+  owner: backstage/maintainers
+  lifecycle: experimental
+  consumesApis:
+    - demo-graphql
+---
+apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: petstore
-  description: Swagger PetStore Sample REST API
+  name: demo-graphql
+  description: GraphQL Backend Plugin
 spec:
-  type: openapi
+  type: graphql
   lifecycle: production
-  owner: user:guest
+  owner: backstage/maintainers
+  apiConsumedBy:
+    - backstage-demo
   definition:
-    $text: https://petstore.swagger.io/v2/swagger.json
+    $text: https://demo.backstage.io/api/graphql/schema
