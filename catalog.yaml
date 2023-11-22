@@ -8,5 +8,5 @@ spec:
   lifecycle: production
   owner: user:guest
   definition:
-    $text: https://0nve1sk3ge.execute-api.ap-south-1.amazonaws.com/Test-stage
+    $text: https://petstore.swagger.io/v2/swagger.json
 ~
