@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: petstore
+  description: Swagger PetStore Sample REST API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: user:guest
+  definition:
+    $text: https://0nve1sk3ge.execute-api.ap-south-1.amazonaws.com/Test-stage
+~
