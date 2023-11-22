@@ -1,13 +1,13 @@
 apiVersion: backstage.io/v1alpha1
-kind: API
+kind: Component
 metadata:
-  name: demo-graphql
-  description: GraphQL Backend Plugin
+  name: backstage-demo
+  description: An example deployment of a Backstage application.
+  annotations:
+    github.com/project-slug: backstage/demo
 spec:
-  type: graphql
-  lifecycle: production
+  type: website
   owner: backstage/maintainers
-  apiConsumedBy:
-    - backstage-demo
-  definition:
-    $text: https://demo.backstage.io/api/graphql/schema
+  lifecycle: experimental
+  consumesApis:
+    - demo-graphql
