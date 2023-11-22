@@ -1,18 +1,4 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: backstage-demo
-  description: An example deployment of a Backstage application.
-  annotations:
-    github.com/project-slug: backstage/demo
-spec:
-  type: website
-  owner: backstage/maintainers
-  lifecycle: experimental
-  consumesApis:
-    - demo-graphql
----
-apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: demo-graphql
